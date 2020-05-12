@@ -51,36 +51,34 @@ $(function() {
     });
   });
 
-
   
-  function myKeyPress(e){
+  function myKeyPress(event){
     var cardNum = document.getElementById('CCnumber').value;
     console.log(cardNum);
-    
-    var keyPressed;
-    if(window.event) { // IE
-      keyPressed = e.keyCode;
-    } else if(e.which){ // Netscape/Firefox/Opera
-      keyPressed = e.which;
+    var keyPressed="";
+    if(window.event && event.keyCode>=48 && event.keyCode<=57) { // IE
+      keyPressed = event.keyCode;
+    } else if(event.which  && event.keyCode>=48 && event.keyCode<=57){ // Netscape/Firefox/Opera
+      keyPressed = event.which;
     }
-  
-    var x = String.fromCharCode(keyPressed);
-    var y = formatPhoneNumber(cardNum);
 
-    console.log("Key Pressed = " + x);
-    console.log("  Formatted = " + y);
-    
-    if(cardNum.length >= 19){
-      return false
-    }
-    document.getElementById('CCnumber').value = y;
-  };
-  
-  function formatPhoneNumber(value){
+if (keyPressed !==""){
+  var num = String.fromCharCode(keyPressed);
+  var maskedNum;
+  maskedNum = maskNum(cardNum);
+  console.log("Key Pressed = " + keyPressed);
+  console.log("  Formatted = " + maskedNum);
+  if(cardNum.length >= 19){
+    return false
+}
+document.getElementById('CCnumber').value = maskedNum;
+}else
+return false;
 
+  };  
+  function maskNum(value){
     if(value.length == 4 || value.length == 9 || value.length == 14 )
       value = value + ' ';
-
     return value;
   };
    /* mytextbox.addEventListener('input', inputChanged);
