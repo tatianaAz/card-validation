@@ -151,7 +151,7 @@
           </div>
           <div class="col-md-6 mb-3">
             <label for="cc-number">Credit card number</label>
-            <input type="text" class="form-control" name="CCnumber" id="CCnumber" placeholder="" onkeypress="return myKeyPress(event)">
+            <input type="text" class="form-control" name="CCnumber" id="CCnumber" placeholder="" onkeydown="return myKeyPress(event)">
           </div>
         </div>
 
@@ -166,7 +166,7 @@
        </div>
         <div class="mb-3">
           <label for="cc-number">Credit card number3</label>
-        <input id="cc" type="text" placeholder="MM/YY" class="masked" pattern="([0-9] [0-9] [0-9] [0-9]) [0-9])" data-valid-example="05/18"/>
+        <input id="cc" type="text" placeholder="" class="masked" pattern="([0-9]{4} [0-9]{4} [0-9] [0-9]) [0-9])" data-valid-example="05/18"/>
         </div>
         <div class="row">
           <div class="col-md-3 mb-3">
@@ -195,8 +195,8 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
- <!-- <script src="Scripts/jquery.maskedinput.min.js"></script>
-  <script src="https://cdnjs.com/libraries/jquery.mask"></script>-->
+ <script src="Scripts/jquery.maskedinput.min.js"></script>
+  <script src="https://cdnjs.com/libraries/jquery.mask"></script>
   <script src="js/form-validation.js"></script>
   </body>
 </html>

@@ -54,7 +54,9 @@ $(function() {
       }
     });
   });
-
+$(document).ready(function(){
+  $(".masked").mask("(999) 999-9999");
+});
 //  $(".CCnumber4").mask("(999) 999-9999");
 function numberMobile(e){
  // e.target.value = e.target.value.replace(/[^\d]/g,'');
