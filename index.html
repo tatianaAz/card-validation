@@ -33,12 +33,12 @@
             <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Doe"/>
           </div>
         </div>
-<!--
+
         <div class="mb-3">
           <label for="email">Email</label>
           <input type="email" class="form-control" name="email" id="email" placeholder="john@doe.com"/>
         </div>
--->
+
         <div class="mb-3">
           <label for="address">Address</label>
           <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St" >
@@ -156,11 +156,18 @@
         </div>
 
         <div class="mb-3">
-           <label for="cc-number">Credit card number</label>
+           <label for="cc-number">Credit card number2</label>
             <input type="text" class="form-control" name="CCnumber2" id="CCnumber2" placeholder="">
-
         </div>
 
+        <div class="mb-3">
+          <label for="cc-number">Credit card number4</label>
+           <input type="text" class="form-control" name="CCnumber4" class="CCnumber4" placeholder="XXXX XXXX XXXX XXXX" onkeyup="numberMobile(event);">
+       </div>
+        <div class="mb-3">
+          <label for="cc-number">Credit card number3</label>
+        <input id="cc" type="text" placeholder="MM/YY" class="masked" pattern="([0-9] [0-9] [0-9] [0-9]) [0-9])" data-valid-example="05/18"/>
+        </div>
         <div class="row">
           <div class="col-md-3 mb-3">
             <label for="cc-expiration">Expiration</label>
@@ -188,7 +195,8 @@
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
- <!-- <script src="https://cdnjs.com/libraries/jquery.mask"></script>-->
+ <!-- <script src="Scripts/jquery.maskedinput.min.js"></script>
+  <script src="https://cdnjs.com/libraries/jquery.mask"></script>-->
   <script src="js/form-validation.js"></script>
   </body>
 </html>

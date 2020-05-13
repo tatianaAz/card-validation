@@ -28,11 +28,10 @@ $(function() {
             digits: true,
             rangelength: [3, 4]
         },
-       // email: {
-      //    required: false,
-          //email is validated by the built-in "email" rule
-     //    email: true
-      //  },
+        email: {
+          required: false,
+        email: true,
+        },
       },
       // Specify validation error messages
       messages: {
@@ -47,7 +46,7 @@ $(function() {
         CCname: "This field is required",
         CCexpiration: "This field is required",
 
-    //    email: "Please enter a valid email address"
+        email: "Please enter a valid email address"
       },
       submitHandler: function(form) {
         alert('All entries are validated successfully!');
@@ -56,7 +55,34 @@ $(function() {
     });
   });
 
-  
+//  $(".CCnumber4").mask("(999) 999-9999");
+function numberMobile(e){
+ // e.target.value = e.target.value.replace(/[^\d]/g,'');
+ // return false;
+ var cardNum = document.getElementById('CCnumber4').value;
+    console.log(cardNum);
+    var keyPressed="";
+    if(window.event && event.keyCode>=48 && event.keyCode<=57) { // IE
+      keyPressed = event.keyCode;
+    } else if(event.which  && event.keyCode>=48 && event.keyCode<=57){ // Netscape/Firefox/Opera
+      keyPressed = event.which;
+    }
+
+if (keyPressed !==""){
+  var num = String.fromCharCode(keyPressed);
+  var maskedNum;
+  maskedNum = maskNum(cardNum);
+  console.log("Key Pressed = " + keyPressed);
+  console.log("  Formatted = " + maskedNum);
+  if(cardNum.length >= 19){
+    return false
+}
+document.getElementById('CCnumber4').value = maskedNum;
+}else
+return false;
+}
+
+
   function myKeyPress(event){
     var cardNum = document.getElementById('CCnumber').value;
     console.log(cardNum);
