@@ -14,8 +14,8 @@ $(function() {
         CCname: "required",
         CCnumber: {
             required: true,
-            digits: true,
-            rangelength: [16, 19]
+         //   digits: true,
+         //   rangelength: [16, 19]
         },
         CCnumber2: {
           required: true,
