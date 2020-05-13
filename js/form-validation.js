@@ -62,11 +62,9 @@ function numberMobile(e){
  var cardNum = document.getElementById('CCnumber4').value;
     console.log(cardNum);
     var keyPressed="";
-    if(window.event && event.keyCode>=48 && event.keyCode<=57) { // IE
+    if(event.keyCode>=48 && event.keyCode<=57) { // IE
       keyPressed = event.keyCode;
-    } else if(event.which  && event.keyCode>=48 && event.keyCode<=57){ // Netscape/Firefox/Opera
-      keyPressed = event.which;
-    }
+    } 
 
 if (keyPressed !==""){
   var num = String.fromCharCode(keyPressed);
