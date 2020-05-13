@@ -17,6 +17,11 @@ $(function() {
             digits: true,
             rangelength: [16, 19]
         },
+        CCnumber2: {
+          required: true,
+          digits: true,
+          rangelength: [16, 19]
+      },
         CCexpiration: "required",
         CCcvv: {
             required: true,
